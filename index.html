@@ -8,6 +8,22 @@
 </head>
 <body>
 
+<div id="donermenu" class="donermenu">
+        <a href="#" class="close-btn" onclick="closeMenu()">×</a>
+        <a href="#" onclick="showPopup(this,'В этом разделе пользователи могут детально спроектировать сценарий распространения пожара, используя различные параметры и настройки, чтобы смоделировать поведение огня в разных условиях.')">Проектирование пожара</a>
+        <a href="#" onclick="window.location.href='https://sulta24.github.io/SecondPAge_ES/'" target="_blank">Проектирование пожара по шаблонам</a>
+        <a href="#" onclick="showPopup(this, 'Содержит все необходимые инструменты, данные и материалы для работы с моделями пожара. Включает документацию, обучающие материалы, а также ссылки на внешние источники.')">Ресурсы</a>
+        <a href="#" onclick="showPopup(this, 'Этот раздел предоставляет информацию о целях и задачах проекта, его разработчиках и технологиях, использованных для создания платформы. Также может включать контакты и описание возможностей для сотрудничества.')">О проекте</a>
+        <a href="#" onclick="showPopup(this, 'Сотрудничество')">Сотрудничество</a>
+    </div>
+    <button id="menuButton" class="open" onclick="openMenu()">☰</button>
+
+
+
+  <div class="image-container" id="image-container">
+    <img id="image" src="" alt="Landscape" />
+    <canvas id="fireCanvas" class="fire-canvas"></canvas>
+  </div>
   <!-- Меню с кнопками -->
   <div class="buttons">
     <button onclick="startFireCycle('evergreen_coniferous')">Вечнозелёные хвойные леса</button>
@@ -38,11 +54,6 @@
     <button onclick="updateFireCycle()">Применить параметры</button>
   </div>
 
-  <!-- Контейнер для изображения -->
-  <div class="image-container" id="image-container">
-    <img id="image" src="" alt="Landscape" />
-    <canvas id="fireCanvas" class="fire-canvas"></canvas>
-  </div>
 
   <script src="Second_pg_script.js"></script>
 </body>
